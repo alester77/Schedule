@@ -16,10 +16,36 @@ $(function() {
   function colorForTime () {
     var timeSpot = document.createElement("h4");
     var today = dayjs();
-    var time = dayjs().format('hh:mm:ss');
-    $('#time').text(time);
+    var timeOfDay = dayjs().format('h');
     $('#time').text(today);
-    console.log(time);
+    console.log(timeOfDay);
+    
+    if (timeOfDay === 9) {
+      document.getElementById("hour-9").style.backgroundColor= "green";
+    } else if (timeOfDay >= 9) {
+      document.getElementById("hour-9").style.backgroundColor= "#e39695";
+    } else {
+      document.getElementById("hour-9").style.backgroundColor= "grey";
+    }
+
+    if (timeOfDay === 10) {
+      document.getElementById("hour-10").style.backgroundColor= "green";
+    } else if (timeOfDay >= 9) {
+      document.getElementById("hour-10").style.backgroundColor= "#e39695";
+    } else {
+      document.getElementById("hour-10").style.backgroundColor= "grey";
+    }
+
+    if (timeOfDay === 10) {
+      document.getElementById("hour-11").style.backgroundColor= "green";
+    } else if (timeOfDay >= 9) {
+      document.getElementById("hour-11").style.backgroundColor= "#e39695";
+    } else {
+      document.getElementById("hour-11").style.backgroundColor= "grey";
+    }
+
+
+
   }
   colorForTime();
   
