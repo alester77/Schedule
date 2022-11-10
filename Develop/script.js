@@ -1,9 +1,12 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+// Display date and have current hour available for styling
 
 
 $(function() {
+  var today = dayjs().format("MMMM D, YYYY");
+  
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -13,42 +16,16 @@ $(function() {
   //
 
   // TODO: Add code to apply the past, present, or future class to each time
-  function colorForTime () {
-    var timeSpot = document.createElement("h4");
-    var today = dayjs();
-    var timeOfDay = dayjs().format('h');
+  function blockColor () {
+    var timeOfDay = dayjs().format('HH');
     $('#time').text(today);
     console.log(timeOfDay);
     
-    if (timeOfDay === 9) {
-      document.getElementById("hour-9").style.backgroundColor= "green";
-    } else if (timeOfDay >= 9) {
-      document.getElementById("hour-9").style.backgroundColor= "#e39695";
-    } else {
-      document.getElementById("hour-9").style.backgroundColor= "grey";
+    $("block-time").each(function() {
+      var blockTime = document.getElementById("")
     }
-
-    if (timeOfDay === 10) {
-      document.getElementById("hour-10").style.backgroundColor= "green";
-    } else if (timeOfDay >= 9) {
-      document.getElementById("hour-10").style.backgroundColor= "#e39695";
-    } else {
-      document.getElementById("hour-10").style.backgroundColor= "grey";
-    }
-
-    if (timeOfDay === 10) {
-      document.getElementById("hour-11").style.backgroundColor= "green";
-    } else if (timeOfDay >= 9) {
-      document.getElementById("hour-11").style.backgroundColor= "#e39695";
-    } else {
-      document.getElementById("hour-11").style.backgroundColor= "grey";
-    }
-
-
-
   }
-  colorForTime();
-  
+  blockColor();  
   
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
