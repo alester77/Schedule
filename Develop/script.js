@@ -17,13 +17,22 @@ $(function() {
 
   // TODO: Add code to apply the past, present, or future class to each time
   function blockColor () {
-    var timeOfDay = dayjs().format('HH');
+    var timeOfDay = parseInt(dayjs().format('HH'));
     $('#time').text(today);
     console.log(timeOfDay);
+  
+    $( ".time-block" ).each(function() {
+      console.log($( this ).attr('id'));
+      var timeBlock = $( this ).attr('id');
+      if (timeBlock == timeOfDay) {
+        $(this).addClass("present");
+      } else if (timeBlock < timeOfDay) {
+        $(this).addClass("past");
+      } else if (timeBlock > timeOfDay) {
+        $(this).addClass("future");
+      }});
+
     
-    $("block-time").each(function() {
-      var blockTime = document.getElementById("")
-    }
   }
   blockColor();  
   
