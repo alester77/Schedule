@@ -18,3 +18,13 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+## Description
+### This project was for DU's coding boot camp. This was our first project we were able to use JQuery to help with coding JavaScript and it made the process much shorter and easier. I'm glad I was able to learn more about using it because it frees up a lot of time and helps make the development process much easier.  
+
+## Credits
+### Thank you to my instructor and my TA's for answering my questions along the way. And thanks to the learncode.academy for their helpful YouTube tutorials.  
+
+## Deployed site
+
+
+<img src="assets/images/screenshot.png">
