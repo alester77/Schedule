@@ -26,5 +26,6 @@ THEN the saved events persist
 
 ## Deployed site
 
+https://alester77.github.io/Schedule/
 
 <img src="assets/images/screenshot.png">
