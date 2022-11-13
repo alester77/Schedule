@@ -10,7 +10,6 @@ $(function() {
     $('#time').text(today);
   
     $( ".time-block" ).each(function() {
-      // console.log($( this ).attr('id'));
       var timeBlock = $( this ).attr('id');
       if (timeBlock == timeOfDay) {
         $(this).addClass("present");
@@ -22,16 +21,17 @@ $(function() {
   }
   blockColor();  
 
-  // this is try two
+  // Save the text when you click the save button
   $(document).ready(function (){
     $(".saveBtn").on("click", function() {
       console.log(this);
-      // getting the type in box to store on save
+      //this refers to the click functions for the various save buttons
       var text = $(this).siblings(".description").val();
       var times = $(this).parent().attr("id");
 
       localStorage.setItem(times, text);
     })
+    // get the info for the particular hour saved item
     $("#9 .description").val(localStorage.getItem(9));
     $("#10 .description").val(localStorage.getItem(10));
     $("#11 .description").val(localStorage.getItem(11));
